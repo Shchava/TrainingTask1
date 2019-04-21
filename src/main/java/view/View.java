@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class View {
-    public static final String MESSAGES_BUNDLE_NAME = "Messages";
+    public static final String MESSAGES_BUNDLE_NAME = "messages";
 
-    public ResourceBundle Messages = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME);
+    public ResourceBundle messages = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME);
 
     public void print(String message){
         System.out.println(message);
