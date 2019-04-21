@@ -49,9 +49,9 @@ public class View {
         print(message);
     };
 
-    public void printCalories(int calories){};
-
-    public void printSortedByWeight(){};
+    public void printSortedByWeight(){
+        print(messages.getString("sortedByWeight"));
+    };
 
     public void printFindingFromRangeOfCalories(int minCalories,int maxCalories){};
 
