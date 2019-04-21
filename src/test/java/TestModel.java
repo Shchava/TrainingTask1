@@ -13,7 +13,7 @@ public class TestModel {
         for(int i = 0; i < 1000; i++){
             HashSet<VegetableType> unique = new HashSet<>();
 
-            Salad testSalad = testModel.makeRandomSalad();
+            Salad testSalad = testModel.makeRandomVegetableSalad();
 
             for(FoodIngredient ingredient : testSalad.getIngredients()){
                 assertTrue(unique.add(((Vegetable)ingredient).getType()));

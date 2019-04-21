@@ -7,7 +7,7 @@ public class Model {
     public final double MAX_INGREDIENT_WEIGHT = 2;
     public final double MIN_INGREDIENT_WEIGHT = 0.01;
 
-    public Salad makeRandomSalad(){
+    public Salad makeRandomVegetableSalad(){
         Salad salad = new Salad();
         HashSet<Integer> used = new HashSet<Integer>();
         for(int i = 0; i < 5; i++){
