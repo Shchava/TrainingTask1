@@ -33,7 +33,9 @@ public class Salad implements EatAble{
         ingredients.sort(Comparator.comparingInt(FoodIngredient::getCalories));
     };
 
-    public void sortByWeight(){};
+    public void sortByWeight(){
+        ingredients.sort(Comparator.comparingDouble(FoodIngredient::getWeight));
+    };
 
     public List<FoodIngredient> getIngredientsMatchesCaloriesRange(int minCalories,int maxCalories){
         return null;
