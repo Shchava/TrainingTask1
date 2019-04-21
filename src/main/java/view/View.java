@@ -62,6 +62,9 @@ public class View {
         print(message);
     };
 
-    public void printContinueInvitation(){};
+    public void printContinueInvitation(){
+        String message = String.format(messages.getString("continueInvitation"),messages.getString("continue"));
+        print(message);
+    };
 
 }
