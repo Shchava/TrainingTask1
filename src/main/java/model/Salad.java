@@ -44,6 +44,6 @@ public class Salad implements EatAble{
     }
 
     public int getCalories() {
-        return 0;
+        return ingredients.stream().mapToInt(FoodIngredient::getCalories).sum();
     }
 }
