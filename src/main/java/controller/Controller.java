@@ -20,7 +20,6 @@ public class Controller {
     }
 
     public void process(){
-        view.printStartMessage();
         do{
             view.printMethodInvitation();
             Salad salad = model.makeRandomVegetableSalad();
