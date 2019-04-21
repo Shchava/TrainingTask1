@@ -44,6 +44,10 @@ public class View {
         return vegetableNames.getString(type.name());
     }
 
+    public void printCalories(int calories){
+        String message =  String.format(messages.getString("formatCaloriesOutput"),calories);
+        print(message);
+    };
 
     public void printCalories(int calories){};
 
