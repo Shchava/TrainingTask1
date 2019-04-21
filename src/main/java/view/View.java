@@ -17,9 +17,11 @@ public class View {
 
     public void printStartMessage(){};
 
-    public void printMethodInvitation(){};
+    public void printVegetableSalad(Salad salad){
+        for(FoodIngredient ingredient:salad.getIngredients()){
 
-    public void printSalad(Salad salad){};
+        }
+    };
 
     public void printCalories(int calories){};
 

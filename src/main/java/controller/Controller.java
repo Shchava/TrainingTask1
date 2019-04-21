@@ -24,18 +24,18 @@ public class Controller {
         do{
             view.printMethodInvitation();
             Salad salad = model.makeRandomVegetableSalad();
-            view.printSalad(salad);
+            view.printVegetableSalad(salad);
             view.printCalories(salad.getCalories());
             salad.sortByWeight();
             view.printSortedByWeight();
-            view.printSalad(salad);
+            view.printVegetableSalad(salad);
             int minCalories = 1000;
             int maxCalories = 9000;
             view.printFindingFromRangeOfCalories(minCalories,maxCalories);
             List<FoodIngredient> matchesCalories =  salad.getIngredientsMatchesCaloriesRange(minCalories,maxCalories);
             view.printListOfIngredients(matchesCalories);
             view.printContinueInvitation();
-        }while(sc.nextLine().equals(view.Messages.getString("continue")));
+        }while(sc.nextLine().equals(view.messages.getString("continue")));
     }
 
 }
