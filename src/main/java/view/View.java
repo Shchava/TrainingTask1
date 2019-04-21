@@ -25,7 +25,11 @@ public class View {
 
     public void printVegetableSalad(Salad salad){
         print(messages.getString("saladOutputInvitation"));
-        for(FoodIngredient ingredient:salad.getIngredients()){
+        printListOfIngredients(salad.getIngredients());
+    };
+
+    public void printListOfIngredients(List<FoodIngredient> ingredients){
+        for(FoodIngredient ingredient:ingredients){
             if(ingredient instanceof Vegetable){
                 Vegetable item = (Vegetable) ingredient;
                 print(getStringRepresentationOfVegetable(item));
@@ -57,8 +61,6 @@ public class View {
         String message = String.format(messages.getString("caloriesRangeFormat"),minCalories,maxCalories);
         print(message);
     };
-
-    public void printListOfIngredients(List<FoodIngredient> ingredients){};
 
     public void printContinueInvitation(){};
 
