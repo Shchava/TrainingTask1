@@ -15,7 +15,9 @@ public class View {
         System.out.println(message);
     }
 
-    public void printStartMessage(){};
+    public void printMethodInvitation(){
+        print(messages.getString("startOfMethod"));
+    };
 
     public void printVegetableSalad(Salad salad){
         for(FoodIngredient ingredient:salad.getIngredients()){
