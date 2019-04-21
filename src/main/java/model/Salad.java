@@ -38,7 +38,9 @@ public class Salad implements EatAble{
     };
 
     public List<FoodIngredient> getIngredientsMatchesCaloriesRange(int minCalories,int maxCalories){
-        return null;
+        return ingredients.stream()
+                .filter(ingredient -> ingredient.getCalories() > minCalories && ingredient.getCalories() < maxCalories)
+                .collect(Collectors.toList());
     }
 
     public int getCalories() {
