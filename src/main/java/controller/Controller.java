@@ -28,8 +28,8 @@ public class Controller {
             salad.sortByWeight();
             view.printSortedByWeight();
             view.printVegetableSalad(salad);
-            int minCalories = 1000;
-            int maxCalories = 9000;
+            int minCalories = 10000;
+            int maxCalories = 35000;
             view.printFindingFromRangeOfCalories(minCalories,maxCalories);
             List<FoodIngredient> matchesCalories =  salad.getIngredientsMatchesCaloriesRange(minCalories,maxCalories);
             view.printListOfIngredients(matchesCalories);
