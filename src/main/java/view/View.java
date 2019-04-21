@@ -53,7 +53,10 @@ public class View {
         print(messages.getString("sortedByWeight"));
     };
 
-    public void printFindingFromRangeOfCalories(int minCalories,int maxCalories){};
+    public void printFindingFromRangeOfCalories(int minCalories,int maxCalories){
+        String message = String.format(messages.getString("caloriesRangeFormat"),minCalories,maxCalories);
+        print(message);
+    };
 
     public void printListOfIngredients(List<FoodIngredient> ingredients){};
 
