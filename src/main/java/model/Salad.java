@@ -2,7 +2,9 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Salad implements EatAble{
     private List<FoodIngredient> ingredients;
@@ -27,7 +29,9 @@ public class Salad implements EatAble{
         return ingredients;
     }
 
-    public void sortByCalories(){};
+    public void sortByCalories(){
+        ingredients.sort(Comparator.comparingInt(FoodIngredient::getCalories));
+    };
 
     public void sortByWeight(){};
 
