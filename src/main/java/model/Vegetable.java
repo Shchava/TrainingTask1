@@ -12,4 +12,13 @@ public class Vegetable extends FoodIngredient{
     public VegetableType getType(){
         return type;
     }
+
+    @Override
+    public boolean equals(Object eq){
+            if(eq instanceof Vegetable){
+                Vegetable veg = (Vegetable)eq;
+                return veg.type == type && Double.compare(veg.weight,weight) == 0 && veg.calories == calories;
+            }
+            return false;
+    }
 }
