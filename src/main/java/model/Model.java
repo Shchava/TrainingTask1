@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Model {
-    public final double MAX_INGREDIENT_WEIGHT = 2;
+    public final double MAX_INGREDIENT_WEIGHT = 0.5;
     public final double MIN_INGREDIENT_WEIGHT = 0.01;
 
     public Salad makeRandomVegetableSalad(){
