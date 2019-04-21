@@ -31,8 +31,8 @@ public class Salad implements EatAble{
 
     public void sortByWeight(){};
 
-    public void getIngredientsMatchesCaloriesRange(int minCalories,int maxCalories){
-
+    public List<FoodIngredient> getIngredientsMatchesCaloriesRange(int minCalories,int maxCalories){
+        return null;
     }
 
     public int getCalories() {
