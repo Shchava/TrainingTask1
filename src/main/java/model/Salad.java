@@ -10,7 +10,7 @@ public class Salad implements EatAble{
     private List<FoodIngredient> ingredients;
 
     public Salad(){
-        ingredients = new ArrayList<FoodIngredient>();
+        ingredients = new ArrayList<>();
     }
 
     public Salad(FoodIngredient... ingredients){
@@ -31,11 +31,11 @@ public class Salad implements EatAble{
 
     public void sortByCalories(){
         ingredients.sort(Comparator.comparingInt(FoodIngredient::getCalories));
-    };
+    }
 
     public void sortByWeight(){
         ingredients.sort(Comparator.comparingDouble(FoodIngredient::getWeight));
-    };
+    }
 
     public List<FoodIngredient> getIngredientsMatchesCaloriesRange(int minCalories,int maxCalories){
         return ingredients.stream()
