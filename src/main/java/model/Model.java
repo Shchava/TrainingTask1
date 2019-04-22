@@ -18,7 +18,7 @@ public class Model {
      * */
     public Salad makeRandomVegetableSalad(){
         Salad salad = new Salad();
-        HashSet<Integer> used = new HashSet<Integer>();
+        HashSet<Integer> used = new HashSet<>();
         for(int i = 0; i < 5; i++){
             VegetableType newIngredientType = generateRandomVegetable(used);
             double newIngredientWeight = generateRandomWeight();
