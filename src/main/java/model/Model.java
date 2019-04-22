@@ -6,6 +6,8 @@ import java.util.Set;
  * The {@code Model} provides creating of random salads, each
  * ingredient of created salads have weight on range of
  * {@link #MIN_INGREDIENT_WEIGHT} and {@link #MAX_INGREDIENT_WEIGHT}
+ * @author Yaroslav Shchavinskyy
+ * @since JDK 8.0
  * */
 public class Model {
     public final double MAX_INGREDIENT_WEIGHT = 0.5;
