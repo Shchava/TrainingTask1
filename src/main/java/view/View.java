@@ -6,14 +6,15 @@ import model.Vegetable;
 import model.VegetableType;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class View {
     public static final String MESSAGES_BUNDLE_NAME = "messages";
     public static final String VEGETABLE_NAMES_BUNDLE_NAME = "vegetableNames";
 
-    public ResourceBundle messages = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME);
-    public ResourceBundle vegetableNames = ResourceBundle.getBundle(VEGETABLE_NAMES_BUNDLE_NAME);
+    public ResourceBundle messages = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("ua", "UA"));
+    public ResourceBundle vegetableNames = ResourceBundle.getBundle(VEGETABLE_NAMES_BUNDLE_NAME, new Locale("ua", "UA"));
 
     public void print(String message){
         System.out.println(message);
