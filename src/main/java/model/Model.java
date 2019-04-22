@@ -2,11 +2,20 @@ package model;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * The {@code Model} provides creating of random salads, each
+ * ingredient of created salads have weight on range of
+ * {@link #MIN_INGREDIENT_WEIGHT} and {@link #MAX_INGREDIENT_WEIGHT}
+ *
+ * */
 public class Model {
     public final double MAX_INGREDIENT_WEIGHT = 0.5;
     public final double MIN_INGREDIENT_WEIGHT = 0.01;
 
+    /**
+     * Creates salad with random unique ingredients, that have weight that
+     * bigger then {@link #MIN_INGREDIENT_WEIGHT} and lesser then {@link #MAX_INGREDIENT_WEIGHT}
+     * */
     public Salad makeRandomVegetableSalad(){
         Salad salad = new Salad();
         HashSet<Integer> used = new HashSet<Integer>();
