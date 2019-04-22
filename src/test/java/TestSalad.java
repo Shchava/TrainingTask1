@@ -22,7 +22,7 @@ public class TestSalad {
     void testAddIngredient() {
         Salad test = new Salad();
         for (FoodIngredient vegetable : testVegetablesArray) {
-            test.addIngredient(vegetable);
+            assertTrue(test.addIngredient(vegetable));
         }
         assertIterableEquals(testIngredients, test.getIngredients());
     }
