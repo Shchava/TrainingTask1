@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestVegetables {
+class TestVegetables {
+
     @Test
     void testCreateCucumber(){
         Vegetable cucumber = new Vegetable(VegetableType.Cucumber,0.1);
@@ -12,12 +13,12 @@ public class TestVegetables {
         assertEquals(cucumber.getCalories(), VegetableType.Cucumber.caloriesPerKg * 0.1);
         assertEquals(0.1, cucumber.getWeight());
     }
+
     @Test
     void testCreateAllVegetables(){
         for(VegetableType type:VegetableType.values()){
             double weight = Math.random()*1000;
             tryCreateVegetable(type,weight);
-
         }
     }
 
