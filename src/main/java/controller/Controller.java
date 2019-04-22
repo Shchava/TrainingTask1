@@ -21,20 +21,40 @@ public class Controller {
 
     public void process(){
         do{
-            view.printMethodInvitation();
-            Salad salad = model.makeRandomVegetableSalad();
-            view.printVegetableSalad(salad);
-            view.printCalories(salad.getCalories());
-            salad.sortByWeight();
-            view.printSortedByWeight();
-            view.printVegetableSalad(salad);
-            int minCalories = 10000;
-            int maxCalories = 35000;
-            view.printFindingFromRangeOfCalories(minCalories,maxCalories);
-            List<FoodIngredient> matchesCalories =  salad.getIngredientsMatchesCaloriesRange(minCalories,maxCalories);
-            view.printListOfIngredients(matchesCalories);
+            doMainActions();
             view.printContinueInvitation();
         }while(sc.nextLine().equals(view.messages.getString("continue")));
+    }
+    private void doMainActions(){
+        Salad salad = saladCreating();
+        countCalories(salad);
+        saladSorting(salad);
+        getIngredientsFromCaloriesRange(salad);
+    }
+    private Salad saladCreating(){
+        view.printMethodInvitation();
+        Salad salad = model.makeRandomVegetableSalad();
+        view.printVegetableSalad(salad);
+        return salad;
+    }
+
+    private void countCalories(Salad salad){
+        int calories = salad.getCalories();
+        view.printCalories(calories);
+    }
+
+    private void saladSorting(Salad salad){
+        salad.sortByWeight();
+        view.printSortedByWeight();
+        view.printVegetableSalad(salad);
+    }
+
+    private void getIngredientsFromCaloriesRange(Salad salad){
+        int minCalories = 10000;
+        int maxCalories = 35000;
+        view.printFindingFromRangeOfCalories(minCalories,maxCalories);
+        List<FoodIngredient> matchesCalories =  salad.getIngredientsMatchesCaloriesRange(minCalories,maxCalories);
+        view.printListOfIngredients(matchesCalories);
     }
 
 }
