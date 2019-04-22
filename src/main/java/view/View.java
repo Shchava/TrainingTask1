@@ -6,6 +6,7 @@ import model.Vegetable;
 import model.VegetableType;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class View {
@@ -21,7 +22,7 @@ public class View {
 
     public void printMethodInvitation(){
         print(messages.getString("startOfMethod"));
-    };
+    }
 
     public void printVegetableSalad(Salad salad){
         print(messages.getString("saladOutputInvitation"));
@@ -37,7 +38,7 @@ public class View {
                 print(messages.getString("notVegetable"));
             }
         }
-    };
+    }
 
     private String getStringRepresentationOfVegetable(Vegetable item){
         String name = getLocalisedVegetableType(item.getType());
@@ -51,20 +52,20 @@ public class View {
     public void printCalories(int calories){
         String message =  String.format(messages.getString("formatCaloriesOutput"),calories);
         print(message);
-    };
+    }
 
     public void printSortedByWeight(){
         print(messages.getString("sortedByWeight"));
-    };
+    }
 
     public void printFindingFromRangeOfCalories(int minCalories,int maxCalories){
         String message = String.format(messages.getString("caloriesRangeFormat"),minCalories,maxCalories);
         print(message);
-    };
+    }
 
     public void printContinueInvitation(){
         String message = String.format(messages.getString("continueInvitation"),messages.getString("continue"));
         print(message);
-    };
+    }
 
 }

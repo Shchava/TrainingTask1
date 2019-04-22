@@ -10,19 +10,19 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestSalad {
-    FoodIngredient[] testVegetablesArray = {new Vegetable(VegetableType.Cucumber, 0.1),
+class TestSalad {
+    private FoodIngredient[] testVegetablesArray = {new Vegetable(VegetableType.Cucumber, 0.1),
             new Vegetable(VegetableType.Potato, 0.2), new Vegetable(VegetableType.Tomato, 0.15),
             new Vegetable(VegetableType.Radish, 0.05)};
 
-    List<FoodIngredient> testIngredients = Arrays.asList(testVegetablesArray);
-    Salad testSalad = new Salad(testIngredients);
+    private List<FoodIngredient> testIngredients = Arrays.asList(testVegetablesArray);
+    private Salad testSalad = new Salad(testIngredients);
 
     @Test
     void testAddIngredient() {
         Salad test = new Salad();
         for (FoodIngredient vegetable : testVegetablesArray) {
-            test.addIngredient(vegetable);
+            assertTrue(test.addIngredient(vegetable));
         }
         assertIterableEquals(testIngredients, test.getIngredients());
     }
