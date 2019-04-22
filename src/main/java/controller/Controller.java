@@ -13,6 +13,9 @@ public class Controller {
     private Model model;
     private Scanner sc;
 
+    private int minCalories = 10000;
+    private int maxCalories = 35000;
+
     public Controller(View view,Model model){
         this.view = view;
         this.model = model;
@@ -50,8 +53,6 @@ public class Controller {
     }
 
     private void getIngredientsFromCaloriesRange(Salad salad){
-        int minCalories = 10000;
-        int maxCalories = 35000;
         view.printFindingFromRangeOfCalories(minCalories,maxCalories);
         List<FoodIngredient> matchesCalories =  salad.getIngredientsMatchesCaloriesRange(minCalories,maxCalories);
         view.printListOfIngredients(matchesCalories);
